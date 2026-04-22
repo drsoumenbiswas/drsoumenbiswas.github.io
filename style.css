@@ -336,7 +336,7 @@ h4 {
 
 .pub-title {
     font-size: 1.15rem;
-    color: #fff;
+    color: var(--text-primary);
     margin-bottom: 8px;
     line-height: 1.4;
 }
@@ -425,7 +425,7 @@ footer {
 }
 
 .award-details h4 {
-    color: #fff;
+    color: var(--text-primary);
     font-size: 1.1rem;
     margin-bottom: 5px;
 }
@@ -596,7 +596,7 @@ footer {
 
 .exp-title {
     font-size: 1.25rem;
-    color: #fff;
+    color: var(--text-primary);
     margin-bottom: 5px;
 }
 
@@ -802,7 +802,7 @@ footer {
 }
 
 .photo-caption h4 {
-    color: #fff;
+    color: var(--text-primary);
     font-size: 1.15rem;
     margin-bottom: 8px;
     line-height: 1.3;

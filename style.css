@@ -659,6 +659,7 @@ footer {
     line-height: 1.7;
     font-size: 1.05rem;
     color: var(--text-primary);
+    text-align: justify;   /* ✅ ADD THIS */
 }
 
 .summary-box strong {
@@ -825,7 +826,5 @@ footer {
     border-radius: 20px;
 }
 
-.summary-section {
-  text-align: justify;
-}
+
 

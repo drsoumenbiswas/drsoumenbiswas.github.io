@@ -61,14 +61,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Theme Switch Logic
     const themeBtn = document.getElementById('theme-btn');
+    const root = document.documentElement;
+
+    // Load saved theme or default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') {
+        root.setAttribute('data-theme', 'dark');
+        themeBtn.textContent = '🌘';
+    } else {
+        root.removeAttribute('data-theme');
+        themeBtn.textContent = '🌓';
+    }
+
     themeBtn.addEventListener('click', () => {
-        const root = document.documentElement;
-        if (root.getAttribute('data-theme') === 'light') {
+        if (root.getAttribute('data-theme') === 'dark') {
             root.removeAttribute('data-theme');
             themeBtn.textContent = '🌓';
+            localStorage.setItem('theme', 'light');
         } else {
-            root.setAttribute('data-theme', 'light');
+            root.setAttribute('data-theme', 'dark');
             themeBtn.textContent = '🌘';
+            localStorage.setItem('theme', 'dark');
         }
     });
 
